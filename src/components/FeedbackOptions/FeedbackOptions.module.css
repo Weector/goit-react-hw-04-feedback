@@ -1,0 +1,46 @@
+.btn {
+  width: 150px;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  transition: background-color 250ms ease;
+}
+
+.btn.good:hover {
+  background-color: rgba(23, 103, 23, 0.825);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.btn.neutral:hover {
+  background-color: rgba(138, 130, 10, 0.837);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.btn.bad:hover {
+  background-color: rgba(136, 22, 22, 0.84);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.good {
+  composes: btn;
+  background-color: rgb(37, 148, 37);
+}
+
+.neutral {
+  composes: btn;
+  background-color: rgb(190, 179, 19);
+}
+
+.bad {
+  composes: btn;
+  background-color: rgb(204, 54, 54);
+}
