@@ -9,23 +9,23 @@ const optionStyle = {
 };
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
-  return (
-    <li>
+  return Object.keys(options).map(option => (
+    <li key={option}>
       <button
-        className={optionStyle[options.toLowerCase()]}
+        className={optionStyle[option]}
         type="button"
         onClick={onLeaveFeedback}
-        name={options.toLowerCase()}
+        name={option}
       >
-        {options}
+        {option}
       </button>
     </li>
-  );
+  ));
 };
 
 export default FeedbackOptions;
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.string.isRequired,
+  options: PropTypes.shape().isRequired,
   onLeaveFeedback: PropTypes.func.isRequired,
 };
